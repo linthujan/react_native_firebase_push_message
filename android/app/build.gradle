@@ -77,7 +77,7 @@ android {
     namespace "com.react_native_firebase_push_message"
     defaultConfig {
         applicationId "com.react_native_firebase_push_message"
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 23
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
