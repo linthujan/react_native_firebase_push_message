@@ -1,4 +1,4 @@
-package com.react_native_firebase_push_message
+package com.example.react_native_firebase_push_message
 
 import android.app.Application
 import com.facebook.react.PackageList
