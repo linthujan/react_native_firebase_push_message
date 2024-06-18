@@ -40,6 +40,7 @@ function App(): React.JSX.Element {
     mobile: '',
     otp_code: '',
     message: '',
+    language: 'EN',
   });
 
   const backgroundStyle = {
@@ -93,7 +94,8 @@ function App(): React.JSX.Element {
         "device_unique_id_type": "androidId",
         "platform": "ANDROID",
         "fcm_token": token,
-        "app_version": "1.0"
+        "app_version": "1.0",
+        "language": data.language,
       }, {
         headers: {
           Authorization: `Bearer ${jwtToken}`
@@ -109,7 +111,6 @@ function App(): React.JSX.Element {
           textBody: `${message.data?.message}`,
           autoClose: 1500,
         })
-        // SoundPlayer.playUrl('https://masstamilan.dev/downloader/_IpGv4BtIB3MClSepArFiQ/1718346748/d320_cdn/10590/MTEyLjEzNC4xODUuNjA=')
       }
 
       messaging().onMessage(onMessage);
@@ -171,13 +172,15 @@ function App(): React.JSX.Element {
               paddingTop: 50
             }}>
             <View style={{ marginHorizontal: 100, marginTop: 20, flexDirection: 'column', justifyContent: 'space-between', height: 500 }}>
-              <Text style={{ marginBottom: 0 }}>{data.message}</Text>
-              <Text style={{ marginBottom: 0 }}>{data.otp_code}</Text>
               <TextInput value={data.mobile} style={styles.input} placeholder='mobile' onChangeText={(text) => setData((prev) => ({ ...prev, mobile: text }))} />
               <Button title='Login' onPress={login} />
 
               <TextInput value={data.otp_code} style={styles.input} placeholder='otp' onChangeText={(text) => setData((prev) => ({ ...prev, otp_code: text }))} />
               <Button title='Verify Otp' onPress={verifyOtp} />
+              <View style={{ marginBottom: 20 }} />
+
+              <Button color={data.language == 'TA' ? 'green' : undefined} title='Tamil' onPress={() => setData((prev) => ({ ...prev, language: 'TA' }))} />
+              <Button color={data.language == 'EN' ? 'green' : undefined} title='English' onPress={() => setData((prev) => ({ ...prev, language: 'EN' }))} />
 
               <View style={{ marginBottom: 20 }} />
               <Button title='Save on DB' onPress={saveOnDb} />

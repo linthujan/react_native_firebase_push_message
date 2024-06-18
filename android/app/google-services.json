@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "274482717933",
-    "project_id": "reactnativefirebasepushmessage",
-    "storage_bucket": "reactnativefirebasepushmessage.appspot.com"
+    "project_number": "275738589947",
+    "project_id": "landcorner-1944f",
+    "storage_bucket": "landcorner-1944f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:274482717933:android:258b6755b2349e322918e4",
+        "mobilesdk_app_id": "1:275738589947:android:5855968f2439169aaf8e5e",
         "android_client_info": {
           "package_name": "com.example.react_native_firebase_push_message"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBGPA-WzRqduJ39aw9xs2vYQzhp0hxfWHU"
+          "current_key": "AIzaSyDzVgfJPyqXDtJla354C_I8t5q-3Sm3JWk"
         }
       ],
       "services": {
